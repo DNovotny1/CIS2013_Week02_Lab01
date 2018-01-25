@@ -7,34 +7,43 @@ int main()
 		int room_width =10;
 		//float room_radius = 10.3;
 		//float room_circle_area = (room_radius * room_radius) * 3.14;
-		//bool this_is_always_true = true;
+		bool keep_running= true;
+		char question = 'y';
 
-		cout << "enter your length: ";
+		while(keep_running)
+			{
+
+				cout << "enter your length: ";
 		
-		cin >> room_length;
+				cin >> room_length;
 
-		cout << "enter your width: ";
-		cin >> room_width;
+				cout << "enter your width: ";
+				cin >> room_width;
 
 
-		// == != > < <= >=
-		if(room_length == room_width)
-			{
-				cout << "length and Width are the same" << endl;
-			}
-		else
-			{
-				cout << "length and Width are not the same" << endl;
-				cout << "length is " << room_length << endl;
-				cout << "width is " << room_width << endl;
-			}
-		if(room_length > room_width)
-			{
-				cout << "length is greater" << endl;
-			}
-		else
-			{
-				cout << "Width is greater" << endl;
+				// == != > < <= >=
+				if(room_length == room_width)
+					{
+						cout << "length and Width are the same" << endl;
+					}
+				else
+					{
+						cout << "length and Width are not the same" << endl;
+						cout << "length is " << room_length << endl;
+						cout << "width is " << room_width << endl;
+					}
+				if(room_length > room_width)
+					{
+						cout << "length is greater" << endl;
+					}
+				else
+					{
+						cout << "Width is greater" << endl;
+					}
+				cout << "Run again(y/n) :" ;
+				cin >> question;
+
+				if((question != 'y') && (question != 'Y')) {keep_running =false; }
 			}
 
 
